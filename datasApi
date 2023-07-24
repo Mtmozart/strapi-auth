@@ -1,0 +1,110 @@
+{
+  "data": {
+    "setting": {
+      "data": {
+        "id": "1",
+        "attributes": {
+          "BlogName": "Alameda do dev",
+          "blogDescription": "O blog é dedicado a compartilhar conhecimentos e experiências de desenvolvedores em diversas áreas, oferecendo insights valiosos e dicas práticas para o aprimoramento das habilidades de programação. Aborda tópicos como linguagens de programação, frameworks, boas práticas de codificação, desenvolvimento web, mobile, inteligência artificial e muito mais. É uma fonte indispensável de informações atualizadas para desenvolvedores em busca de crescimento profissional e aprendizado contínuo.",
+          "logo": {
+            "data": {
+              "identificador": "3",
+              "attributes": {
+                "name": "3334910-desktop-source-code-and-wallpaper-by-coding-and-programming-gratis-foto.jpg",
+                "altText": null,
+                "url": "/uploads/3334910_desktop_source_code_and_wallpaper_by_coding_and_programming_gratis_foto_984e6e9853.jpg"
+              }
+            }
+          },
+          "menuLink": [
+            {
+              "id": "1",
+              "link": "#home",
+              "text": "Home",
+              "newTab": false
+            },
+            {
+              "id": "2",
+              "link": "#contact",
+              "text": "contato",
+              "newTab": false
+            },
+            {
+              "id": "3",
+              "link": "#posts",
+              "text": "Posts",
+              "newTab": false
+            },
+            {
+              "id": "4",
+              "link": "https://hotmart.com/",
+              "text": "Cursos",
+              "newTab": true
+            }
+          ],
+          "text": "<p>Criado em 2023 | Matheus Mozart</p>"
+        }
+      }
+    },
+    "posts": {
+      "data": [
+        {
+          "id": "1",
+          "attributes": {
+            "title": "A importância do react 6 no frontend",
+            "slug": "a-importancia-do-react-6-no-frontend",
+            "content": "<p style=\"text-align:justify;\">&nbsp;</p><p style=\"text-align:justify;\">O React 6 chegou com uma série de recursos e melhorias que prometem levar o desenvolvimento de interfaces de usuário a um novo patamar. Neste artigo, exploraremos as principais novidades do React 6 e discutiremos a importância dessa atualização para a comunidade de desenvolvedores.</p><p style=\"text-align:justify;\"><strong>1. Hooks reimaginados: Aumentando a flexibilidade</strong> Os Hooks foram introduzidos no React 5 e revolucionaram a forma como lidamos com estado e efeitos colaterais. No React 6, os Hooks foram reimaginados, permitindo uma maior flexibilidade na composição de lógica e comportamento em componentes funcionais. Agora, podemos criar Hooks personalizados mais poderosos e reutilizáveis, simplificando ainda mais o desenvolvimento de aplicações.</p><p style=\"text-align:justify;\"><strong>2. Performance aprimorada: Mais rápido do que nunca</strong> A equipe do React focou em melhorias de desempenho no React 6. A nova versão apresenta um algoritmo de reconciliação aprimorado e otimizações inteligentes de renderização. Isso resulta em uma experiência mais rápida para os usuários finais, com atualizações de interface suaves e tempos de carregamento reduzidos.</p><p style=\"text-align:justify;\"><strong>3. Novas APIs de contexto: Compartilhamento de estado facilitado</strong> O React 6 introduz APIs de contexto aprimoradas, facilitando o compartilhamento de estado entre componentes. Agora, podemos criar contextos mais flexíveis e granulares, permitindo um gerenciamento de estado mais eficiente e evitando problemas comuns de prop drilling (passagem excessiva de propriedades).</p><p style=\"text-align:justify;\"><strong>4. Suporte nativo a TypeScript: Desenvolvimento robusto e seguro</strong> O TypeScript tem ganhado popularidade na comunidade de desenvolvimento JavaScript, e o React 6 abraçou essa tendência. Agora, o React oferece suporte nativo a TypeScript, permitindo o desenvolvimento de aplicativos mais robustos e seguros. A integração perfeita entre o React e o TypeScript oferece autocompletar, detecção de erros em tempo de compilação e uma melhor experiência de desenvolvimento em geral.</p><p style=\"text-align:justify;\"><strong>Conclusão: O futuro do desenvolvimento de interfaces</strong> Com o React 6, a biblioteca JavaScript continua a evoluir e redefinir a forma como construímos interfaces de usuário. Os novos recursos e melhorias trazem mais flexibilidade, desempenho aprimorado, compartilhamento de estado facilitado e suporte nativo a TypeScript. Essas mudanças tornam o desenvolvimento de aplicações mais eficiente, seguro e agradável. O React 6 marca um marco importante na história do React e confirma sua posição como uma das principais escolhas para o desenvolvimento de interfaces modernas e reativas. Não perca tempo e comece a explorar o React 6 hoje mesmo!</p><figure class=\"image\"><img alt=\"alien-planet.jpg\" src=\"/uploads/alien_planet_a3727af9d6.jpg\" srcset=\"/uploads/thumbnail_alien_planet_a3727af9d6.jpg 245w, /uploads/small_alien_planet_a3727af9d6.jpg 500w, /uploads/medium_alien_planet_a3727af9d6.jpg 750w, /uploads/large_alien_planet_a3727af9d6.jpg 1000w\" sizes=\"100vw\" width=\"1000\"></figure><p style=\"text-align:justify;\">&nbsp;</p><p style=\"text-align:justify;\">&nbsp;</p>",
+            "cover": {
+              "data": {
+                "identificador": "1",
+                "attributes": {
+                  "name": "alien-planet.jpg",
+                  "altText": null,
+                  "url": "/uploads/alien_planet_5c84535496.jpg"
+                }
+              }
+            },
+            "excerpt": "Bem-vindo ao nosso site sobre React! Aqui você encontrará um resumo conciso e abrangente sobre essa popular biblioteca JavaScript para construção de interfaces de usuário.",
+            "allowComments": true,
+            "tags": {
+              "data": [
+                {
+                  "id": "2",
+                  "attributes": {
+                    "displayName": "UseEffect",
+                    "slug": "use-effect"
+                  }
+                },
+                {
+                  "id": "1",
+                  "attributes": {
+                    "displayName": "UseState",
+                    "slug": "use-state"
+                  }
+                }
+              ]
+            },
+            "author": {
+              "data": {
+                "id": "1",
+                "attributes": {
+                  "displayName": "Matheus Mozart",
+                  "slug": "matheus-mozart"
+                }
+              }
+            },
+            "category": {
+              "data": {
+                "id": "2",
+                "attributes": {
+                  "displayName": "React6",
+                  "slug": "react6"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
