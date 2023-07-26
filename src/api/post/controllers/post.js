@@ -42,4 +42,32 @@ module.exports = createCoreController("api::post.post", {
 
     return entry;
   },
+
+  async count(ctx) {
+    var { query } = ctx.query;
+    return strapi.qurey("api::post.post").count({ where: query });
+  },
+
+  async update(ctx) {
+    const { id } = ctx.params;
+    const user = ctx.state.user.id;
+
+    const query = (ctx.query.filters = {
+      ...(ctx.query.filters || {}),
+      user: user,
+    });
+
+    return super.update({ where: query });
+  },
+
+  async delete(ctx) {
+    const user = ctx.state.user;
+
+    ctx.query.filters = {
+      ...(ctx.query.filters || {}),
+      owner: user.id,
+    };
+
+    return super.delete(ctx);
+  },
 });
