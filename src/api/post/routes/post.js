@@ -16,11 +16,18 @@ module.exports = {
         policies: ["global::is-authenticated", "is-admin"],
       },
     },
-
     {
       method: "GET",
       path: "/posts",
       handler: "post.find",
+      config: {
+        policies: ["global::is-authenticated", "is-admin"],
+      },
+    },
+    {
+      method: "GET",
+      path: "/posts/:id",
+      handler: "post.findOne",
       config: {
         policies: ["global::is-authenticated", "is-admin"],
       },

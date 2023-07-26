@@ -31,4 +31,15 @@ module.exports = createCoreController("api::post.post", {
 
     return super.find(ctx);
   },
+
+  async findOne(ctx) {
+    const { id } = ctx.params;
+    const user = ctx.state.user.id;
+
+    const entry = await strapi.db.query("api::post.post").findOne({
+      where: { user: user, id: id },
+    });
+
+    return entry;
+  },
 });
