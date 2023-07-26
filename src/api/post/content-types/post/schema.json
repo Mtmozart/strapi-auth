@@ -14,7 +14,7 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": true,
+      "required": false,
       "minLength": 3
     },
     "content": {
@@ -22,8 +22,8 @@
       "options": {
         "preset": "toolbar"
       },
-      "customField": "plugin::ckeditor5.CKEditor",
-      "required": true
+      "required": true,
+      "customField": "plugin::ckeditor5.CKEditor"
     },
     "user": {
       "type": "relation",
