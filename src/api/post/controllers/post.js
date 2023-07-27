@@ -44,30 +44,51 @@ module.exports = createCoreController("api::post.post", {
   },
 
   async count(ctx) {
-    var { query } = ctx.query;
-    return strapi.qurey("api::post.post").count({ where: query });
+    const user = ctx.state.user.id;
+    const [entries, count] = await strapi.db
+      .query("api::blog.article")
+      .findWithCount({
+        select: ["title", "content"],
+        where: { user: user },
+      });
+
+    return entries, count;
   },
 
   async update(ctx) {
     const { id } = ctx.params;
     const user = ctx.state.user.id;
-
-    const query = (ctx.query.filters = {
-      ...(ctx.query.filters || {}),
-      user: user,
+    const post = await strapi.db.query("api::post.post").findOne({
+      where: { user: user, id: id },
     });
+    if (!post) {
+      return ctx.unauthorized("You cannot update this post.");
+    } else {
+      const response = await super.update(ctx);
+      const updatedResponse = await strapi.entityService.update(
+        "api::post.post",
+        response.data.id,
+        { data: { user: id } }
+      );
 
-    return super.update({ where: query });
+      return updatedResponse;
+    }
   },
 
   async delete(ctx) {
-    const user = ctx.state.user;
+    const { id } = ctx.params;
+    const user = ctx.state.user.id;
 
-    ctx.query.filters = {
-      ...(ctx.query.filters || {}),
-      owner: user.id,
-    };
+    const post = await strapi.db.query("api::post.post").findOne({
+      where: { user: user, id: id },
+    });
 
-    return super.delete(ctx);
+    if (!post) {
+      return ctx.unauthorized("You cannot delete this post.");
+    } else {
+      const response = super.delete(ctx);
+
+      return { message: "Post Deleted with success." };
+    }
   },
 });
