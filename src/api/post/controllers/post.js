@@ -61,6 +61,7 @@ module.exports = createCoreController("api::post.post", {
     const post = await strapi.db.query("api::post.post").findOne({
       where: { user: user, id: id },
     });
+
     if (!post) {
       return ctx.unauthorized("You cannot update this post.");
     } else {
@@ -68,7 +69,7 @@ module.exports = createCoreController("api::post.post", {
       const updatedResponse = await strapi.entityService.update(
         "api::post.post",
         response.data.id,
-        { data: { user: id } }
+        { data: { user: user } }
       );
 
       return updatedResponse;
